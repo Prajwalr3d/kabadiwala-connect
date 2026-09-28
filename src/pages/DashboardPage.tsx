@@ -83,7 +83,7 @@ export function DashboardPage() {
                   </div>
                   <div className="rate-value">
                     ₹{rate.ratePerKg.toLocaleString('en-IN')}
-                    <small>/{rate.unit.replace('₹/', '')}kg</small>
+                    <small>/{rate.unit.replace('₹/', '')}</small>
                   </div>
                   <p>{rate.signal}</p>
                 </motion.article>

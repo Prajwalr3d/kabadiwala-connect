@@ -1,3 +1,9 @@
+/* App-level reset kept intentionally minimal so the dashboard styling remains stable and consistent. */
+
+#root {
+  min-height: 100vh;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

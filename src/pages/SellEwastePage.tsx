@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from 'react-router-dom'
-import { MadhubaniCorner } from '../components/art/MadhubaniCorner'
-import { MadhubaniPattern } from '../components/art/MadhubaniPattern'
+import { ImageUp, ShieldAlert } from 'lucide-react'
 import { useAppStore } from '../store/useAppStore'
 import { inspectWasteImage } from '../services/inspectionService'
 import { estimateIndicativePrice } from '../services/priceService'
@@ -160,7 +159,9 @@ export function SellEwastePage() {
               <div className="upload-area">
                 {!sellImage ? (
                   <div className="upload-empty">
-                    <MadhubaniPattern className="hero-pattern" />
+                    <div className="upload-empty-icon" aria-hidden="true">
+                      <ImageUp size={38} />
+                    </div>
                     <p className="eyebrow">Add a photo of the e-waste</p>
                     <h3>Upload or take a photo</h3>
                     <p className="muted">Use a clear, well-lit photo. Only visible features are inspected.</p>
@@ -249,7 +250,9 @@ export function SellEwastePage() {
 
                       <div className="inspection-right">
                         <div className="important">
-                          <MadhubaniCorner className="safety-corner" tone="gold" />
+                          <div className="info-icon" aria-hidden="true">
+                            <ShieldAlert size={18} />
+                          </div>
                           <div>
                             <strong>Important</strong>
                             <p>Only visible characteristics are assessed. Internal or hidden condition cannot be determined from this image.</p>
@@ -389,7 +392,9 @@ export function SellEwastePage() {
 
           <aside className="sell-right">
             <div className="panel">
-              <MadhubaniCorner className="safety-corner" tone="green" />
+              <div className="info-icon-panel" aria-hidden="true">
+                <ShieldAlert size={18} />
+              </div>
               <h4>AI inspection (demo)</h4>
               <p className="muted small">This inspection is simulated for demo purposes (modelVersion: YOLO11n-demo).</p>
 

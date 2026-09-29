@@ -1,5 +1,4 @@
-import { BarChart3, BriefcaseBusiness, CircleDollarSign, FileText, House, MapPinned, MessageSquareText, ShieldCheck, ShoppingCart, Users, WalletCards } from 'lucide-react'
-import { MadhubaniPattern } from '../art/MadhubaniPattern'
+import { BarChart3, BriefcaseBusiness, CircleDollarSign, FileText, House, MapPinned, MapPin, MessageSquareText, ShieldCheck, ShoppingCart, Users, WalletCards } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { cn } from '../../lib/utils'
 
@@ -44,14 +43,16 @@ export function Sidebar() {
 			</nav>
 
 			<div className="sidebar-footer">
-				<div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-					<MadhubaniPattern />
-					<div>
+				<div className="network-card">
+					<div className="network-icon">
+						<MapPin size={14} />
+					</div>
+					<div className="network-copy">
 						<div className="tiny-pill">
 							<span className="dot dot-online" />
 							Live pickup network
 						</div>
-						<div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 6 }}>Local partners • Trusted</div>
+						<div className="network-subtext">Local partners · Trusted</div>
 					</div>
 				</div>
 			</div>
